@@ -2,6 +2,9 @@
 
 For CS 350C
 
+[Find any mistakes? Contribute here](https://github.com/nickorlow/charmv3-reference)
+
+
 ## Instructions
 
 ---
