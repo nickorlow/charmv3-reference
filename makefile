@@ -1,2 +1,2 @@
 build:
-	cat index.md | md2html --ftables > index.html
+	cat README.md | md2html --ftables > index.html
