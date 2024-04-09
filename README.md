@@ -2,16 +2,6 @@
 
 For CS 350C
 
-[//]: <> (## Logical Reservations
-|Instruction|Memory|ALU|Bit|
-|---|---|---|---|
-|LDUR|Yes Read| - | - |
-|LDP|Yes Read| - | - |
-|STUR| Yes Write |  -| - |
-|STP| Yes Write |  -| - |
-|MOVK| - |  -| - |
-|MOVZ| - |  -| - |)
-
 ## Instructions
 
 ---
