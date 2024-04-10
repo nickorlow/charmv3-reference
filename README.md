@@ -586,4 +586,4 @@ Stops the processor. Optionally can kick the processor into a debugging state.
     NOP
 ```
 
-Does the same thing as Arpan's hook throw most of the time (Nothing).
+Does the same thing as Nick's hook throw most of the time (Nothing).
