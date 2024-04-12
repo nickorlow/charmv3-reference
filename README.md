@@ -356,7 +356,7 @@ Copies `Xm ^ Xn` to `Xd`
 ```
 
 [Here, you have to decode the #imm12 bitmask](https://developer.arm.com/documentation/ddi0602/2024-03/Shared-Pseudocode/aarch64-functions-bitmasks?lang=en#impl-aarch64.DecodeBitMasks.5).
-Once you have that decoded into an immediate value (we'll call it `#imm12`), then store `Xn & #imm12` in `Xd|SP`.
+Once you have that decoded into an immediate value (we'll call it `#bimm64`), then store `Xn & #bimm64` in `Xd|SP`.
 
 
 **Does not update condition code flags**
