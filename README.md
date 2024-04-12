@@ -29,14 +29,14 @@ Read 64 bit word at memory address stored in `Xn|SP` optionally offset by `#simm
 
 ##### Usage (Post Index)
 ```
-    LDP Xt1, Xt2, [Xn|SP], #simm7
+    LDP Xt1, Xt2, [Xn|SP{,#simm7}]
 ```
 
-Read 2 64 bit words at memory address `[Xn|SP]` into `Xt1` and `Xt2`. 
-The word at `[Xn|SP]` is loaded into `Xt1`, and the word immediately after`[Xn|SP]`
-is loaded into `Xt2`. `Xn|SP` is then incremented by `#simm7`
+Read 2 64 bit words at memory address `[Xn|SP]` offset by `#simm7` into `Xt1` and `Xt2`. 
+The word at `[Xn|SP] + #simm7` is loaded into `Xt1`, and the word immediately after`[Xn|SP] + #simm7`
+is loaded into `Xt2`.
 
-*Note: ARM supports multiple addressing modes, chARMv3 only supports Post-Index Addressing*
+*Note: ARM supports multiple addressing modes, chARMv3 only supports Signed Offset Addressing*
 
 ---
 
@@ -62,14 +62,14 @@ by `#simm9`
 
 #### Usage 
 ```
-    STP Xt1, Xt2, [Xn|SP], #simm7
+    STP Xt1, Xt2, [Xn|SP{,#simm7}]
 ```
 
-Write 2 64 bit words to memory address stored at memory address `[Xn|SP]` from 
-`Xt1` and `Xt2`. The data in `Xt1` is written at memory address `[Xn|SP]`, and 
-the data in `Xt2` is written at the next word in memory after `[Xn|SP]`.
+Write 2 64 bit words to memory address stored at memory address `[Xn|SP]` offset by `#simm7` from 
+`Xt1` and `Xt2`. The data in `Xt1` is written at memory address `[Xn|SP] + #simm7`, and 
+the data in `Xt2` is written at the next word in memory after `[Xn|SP] + #simm7`.
 
-*Note: ARM supports multiple addressing modes, chARMv3 only supports Post-Index Addressing*
+*Note: ARM supports multiple addressing modes, chARMv3 only supports Signed Offset Addressing*
 
 ---
 
