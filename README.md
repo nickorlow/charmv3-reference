@@ -348,13 +348,15 @@ Copies `Xm ^ Xn` to `Xd`
 
 ### AND 
 
-[AND](https://developer.arm.com/documentation/dui0068/latest/Thumb-Instruction-Reference/Thumb-general-data-processing-instructions/AND--ORR--EOR--and-BIC)
+[AND (immediate)](https://developer.arm.com/documentation/ddi0602/2024-03/Base-Instructions/AND--immediate---Bitwise-AND--immediate--)
 
 #### Usage
 ```
-    AND Xd, Xm
+    AND Xd|SP, Xn, #imm12 
 ```
-Stores the value of `Xd & Xm` in `Xd`
+
+[Here, you have to decode the #imm12 bitmask](https://developer.arm.com/documentation/ddi0602/2024-03/Shared-Pseudocode/aarch64-functions-bitmasks?lang=en#impl-aarch64.DecodeBitMasks.5).
+Once you have that decoded into an immediate value (we'll call it `#imm12`), then store `Xn & #imm12` in `Xd|SP`.
 
 
 **Does not update condition code flags**
