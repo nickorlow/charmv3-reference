@@ -151,7 +151,7 @@ Same as `Xd = cond ? Xn : Xm + 1`.
 
 [Conditional INCrement](https://developer.arm.com/documentation/dui0802/b/A64-General-Instructions/CINC)
 
-Alias to CSINC where `CINC Xd, Xn, cond` maps to `CSINC Xd, Xn, Xn, cond`
+Alias to CSINC where `CINC Xd, Xn, cond` maps to `CSINC Xd, Xn, Xn, !cond`
 
 ---
 
@@ -400,7 +400,7 @@ Alias for ANDS, `TST Xn, Xm` gets mapped to `ANDS XZR, Xn, Xm`
     UBFM Xd, Xn, #imm12r, #imm12s
 ```
 
-`#imm12r` is the high 6 bits of `#imm12`, and `#imm6s` is the lower 6 bits of `#imm12`.
+`#imm12r` is the high 6 bits of `#imm12`, and `#imm12s` is the lower 6 bits of `#imm12`.
 
 If `#imm12s >= #imm12r`, then `#imm12s-#imm12r+1` bits are copied starting from 
 bit position `#imm12r` in `Xn` to the least significant bits of `Xd`.
@@ -434,10 +434,10 @@ Alias for `UBFM`, `LSR Xd, Xn, #imm12` is mapped to `UBFM Xd, Xn, #imm6r, #63`
 
 #### Usage *(?)*
 ```
-    UBFM Xd, Xn, #imm12r, #imm12s
+    SBFM Xd, Xn, #imm12r, #imm12s
 ```
 
-`#imm12r` is the high 6 bits of `#imm12`, and `#imm6s` is the lower 6 bits of `#imm12`.
+`#imm12r` is the high 6 bits of `#imm12`, and `#imm12s` is the lower 6 bits of `#imm12`.
 
 If `#imm12s >= #imm12r`, then `#imm12s-#imm12r+1` bits are copied starting from 
 bit position `#imm12r` in `Xn` to the least significant bits of `Xd`.
